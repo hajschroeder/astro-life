@@ -11,7 +11,11 @@ describe('Galactic', () => {
     test('should return a year relative to a planet', () =>{
       let testAge2 = new Galactic();
       testAge2.planetYears();
-      expect(testAge2.earth).toEqual(1)
+      expect(testAge2.earth).toEqual(1);
+      expect(testAge2.mercury).toEqual(0.24);
+      expect(testAge2.venus).toEqual(0.62);
+      expect(testAge2.mars).toEqual(1.88);
+      expect(testAge2.jupiter).toEqual(1.86);
     })
   
 })
