@@ -8,6 +8,7 @@ describe('Galactic', () => {
   }) 
 
   describe('Galactic#planetYears()', () =>{
+
     test('should return a year relative to a planet', () =>{
       let testAge2 = new Galactic();
       testAge2.planetYears();
@@ -17,6 +18,16 @@ describe('Galactic', () => {
       expect(testAge2.mars).toEqual(1.88);
       expect(testAge2.jupiter).toEqual(1.86);
     })
-  
-})
+  })
+
+  describe ('Galactic#lifeExpectancy()', () =>{
+
+    test('should calculate the user life expectancy', () =>{
+      let testAge3 = new Galactic();
+      expect(testAge3.lifeExpectancy()).toEqual(85);
+      
+    }
+
+    )
+  })
 })
