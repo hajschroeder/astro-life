@@ -13,8 +13,10 @@ export default class Galactic{
   }
   
   lifeExpectancy() {
-    let base = 85
-    return base
+    let base = 85;
+    this.male = base - 5;
+    this.female = base + 5;
+    return base;
   }
 }
   
