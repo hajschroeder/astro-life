@@ -11,5 +11,10 @@ export default class Galactic{
     this.mars = 1.88;
     this.jupiter = 1.86;
   }
+  
+  lifeExpectancy() {
+    let base = 85
+    return base
+  }
 }
   
