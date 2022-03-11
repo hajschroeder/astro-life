@@ -16,6 +16,11 @@ export default class Galactic{
     let base = 85;
     this.male = base - 5;
     this.female = base + 5;
+    this.smoker = base -10;
+    this.goodDiet = base + 3;
+    this.badDiet = base - 3;
+    this.exercise = base + 4;
+    this.sedentary = base - 4;
     return base;
   }
 }
