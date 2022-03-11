@@ -24,8 +24,9 @@ describe('Galactic', () => {
 
     test('should calculate the user life expectancy', () =>{
       let testAge3 = new Galactic();
-      expect(testAge3.lifeExpectancy()).toEqual(85);
-      
+      testAge3.lifeExpectancy()
+      expect(testAge3.male).toEqual(80);
+      expect(testage3.female).toEqual(90);      
     }
 
     )
