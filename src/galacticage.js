@@ -28,10 +28,7 @@ export default class Galactic{
     this.male = base - 5;
     this.female = base + 5;
     this.smoker = base -10;
-    this.goodDiet = base + 3;
-    this.badDiet = base - 3;
     this.exercise = base + 4;
-    this.sedentary = base - 4;
 
     return base;
   }
@@ -40,3 +37,6 @@ export default class Galactic{
 let myAge = new Galactic(35);
 console.log(myAge);
 console.log(myAge.planetYears());
+let thisAge = new Galactic(87);
+console.log(thisAge);
+console.log(thisAge.planetYears());
