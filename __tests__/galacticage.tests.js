@@ -3,8 +3,8 @@ import Galactic from '../src/galacticage.js';
 describe('Galactic', () => {
 
   test('should create a new object with properties', () =>{
-    let testAge1 = new Galactic(100, 85)
-    expect(testAge1.age).toEqual(100, 85)
+    let testAge1 = new Galactic(100, "healthy")
+    expect(testAge1.age).toEqual(100, "healthy")
   }) 
 
   describe('Galactic#planetYears()', () =>{
@@ -31,6 +31,13 @@ describe('Galactic', () => {
   })
 
   describe ('Galactic#lifeExpectancy()', () =>{
+    test('should determine life expectancy based on lifestyle', () =>{
+      let testAge3 = new Galactic()
+      testAge3.lifeExpectancy();
+      expect(testAge3.healthyMale).toEqual(85);
+      expect(testAge3.smokerMale).toEqual(75);
+    }
+    )
 
   })
 })
