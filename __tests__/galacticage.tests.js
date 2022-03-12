@@ -32,13 +32,5 @@ describe('Galactic', () => {
 
   describe ('Galactic#lifeExpectancy()', () =>{
 
-    test('should consider variables of life expectancy', () =>{
-      let testAge3 = new Galactic();
-      testAge3.lifeExpectancy();
-      expect(testAge3.male).toEqual(80);
-      expect(testAge3.female).toEqual(90);
-      expect(testAge3.smoker).toEqual(75);
-      expect(testAge.exercise).toEqual(89);   
-    })
   })
 })
