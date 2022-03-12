@@ -38,10 +38,7 @@ describe('Galactic', () => {
       expect(testAge3.male).toEqual(80);
       expect(testAge3.female).toEqual(90);
       expect(testAge3.smoker).toEqual(75);
-      expect(testAge3.goodDiet).toEqual(88);
-      expect(testAge3.badDiet).toEqual(82);
-      expect(testAge3.exercise).toEqual(89);
-      expect(testAge3.sedentary).toEqual(81);      
+      expect(testAge.exercise).toEqual(89);   
     })
   })
 })
