@@ -26,7 +26,7 @@ describe('Galactic', () => {
 
     test('should accept values into the array given an age', () =>{
       let testAge2 = new Galactic(1);
-      expect(testAge2.planetYears()).toEqual([1, 0.24]);
+      expect(testAge2.planetYears()).toEqual([1, 0.24, 0.62, 1.88, 11.86]);
     })
   })
 
