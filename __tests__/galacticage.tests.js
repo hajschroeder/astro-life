@@ -19,9 +19,14 @@ describe('Galactic', () => {
       expect(testAge2.jupiter).toEqual(11.86);
     })
 
-    test('should fill an array with values of the galactic years', () =>{
+    test('should accept a new array', () =>{
       const planetArray = [];
       expect(planetArray).toEqual(expect.arrayContaining(planetArray));
+    })
+
+    test('should accept values into the array given an age', () =>{
+      let testAge2 = new Galactic(1);
+      expect(testAge2.planetYears()).toEqual([1, 0.24]);
     })
   })
 
