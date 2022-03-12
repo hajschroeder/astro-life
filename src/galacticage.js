@@ -1,7 +1,8 @@
 //Business Logic For Age
 export default class Galactic{
-  constructor(age){
+  constructor(age, life){
     this.age = age;
+    this.life = life;
   }
   
   planetYears() {
@@ -24,15 +25,10 @@ export default class Galactic{
   
   
   lifeExpectancy() {
-    let base = 85;
-    this.male = base - 5;
-    this.female = base + 5;
-    this.smoker = base -10;
-    this.exercise = base + 4;
 
-    return base;
+    }
   }
-}
+
 
 let myAge = new Galactic(35);
 console.log(myAge);
@@ -40,3 +36,24 @@ console.log(myAge.planetYears());
 let thisAge = new Galactic(87);
 console.log(thisAge);
 console.log(thisAge.planetYears());
+
+
+// lifeExpectancy() {
+//   let base = 85;
+//   this.male = base - 5;
+//   this.female = base + 5;
+//   this.smoker = base -10;
+//   this.exercise = base + 4;
+
+//   if (this.male === true){
+//     return this.male;
+//   }
+// }
+
+// test('should consider variables of life expectancy', () =>{
+//   let testAge3 = new Galactic();
+//   testAge3.lifeExpectancy();
+//   expect(testAge3.male).toEqual(80);
+//   expect(testAge3.female).toEqual(90);
+//   expect(testAge3.smoker).toEqual(75);
+//   expect(testAge3.exercise).toEqual(89);   
