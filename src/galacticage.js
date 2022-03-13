@@ -31,17 +31,18 @@ export default class Galactic{
     this.smokerFemale = "Female Smoker";
 
     if (this.lifestyle === this.healthyMale){
-      this.lifeLength = 85
+      this.lifeLength = 85;
+    } else if(this.lifestyle === this.smokerMale){
+      this.lifeLength = 75;
+    } else if (this.lifestyle === this.healthyFemale){
+      this.lifeLength = 90;
+    } else if (this.lifestyle === this.smokerFemale){
+      this.lifeLength = 82;
     }
     }
   }
 
 
-let myAge = new Galactic(35);
-console.log(myAge);
-console.log(myAge.planetYears());
-let thisAge = new Galactic(87);
-console.log(thisAge);
-console.log(thisAge.planetYears());
+
 
 

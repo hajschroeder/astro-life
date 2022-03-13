@@ -29,9 +29,9 @@
 
 ## Description
 
-_This is in independent project for Epicodus, the purpose of which is to show my ability to use automated testing (in this case Jest) with my Test Driven Development skills. Furthermore, it is to provide an example of my new working environment, having all my documents bundled using webpack and npm, rather than simply linking my documents in the "<head/>" of my html. 
+_This is in independent project for Epicodus, the purpose of which is to show my ability to use automated testing (in this case Jest) with my Test Driven Development skills. Furthermore, it is to provide an example of my new working environment, having all my documents bundled using webpack and npm, rather than simply linking my documents in the "<head/>" of my html._
 
-The functions within this program exist to serve two purposes. Calculate a user's age relative to another planet, and calculate their life expectancy based on this. 
+_The functions within this program exist to serve two purposes. Calculate a user's age relative to another planet, and calculate their life expectancy based on this._
 
 ## Setup/Installation
 * Clone this repository to your desktop
