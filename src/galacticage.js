@@ -39,8 +39,10 @@ export default class Galactic{
     } else if (this.lifestyle === this.smokerFemale){
       this.lifeLength = 82;
     }
-    }
   }
+
+  
+}
 
 
 

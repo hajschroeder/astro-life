@@ -4,5 +4,5 @@ import './css/styles.css';
 import './css/styles.css';
 import Galactic from './galacticage.js';
 
-let testAge= new Galactic(100);
+let testAge= new Galactic(100, "Healthy Male");
 console.log(testAge);
