@@ -60,8 +60,9 @@ describe('Galactic', () => {
 
     test('should subtract age from life expectancy', () =>{
       let testAge6 = new Galactic(35, "Healthy Female");
-      testAge6.yearsLeft();
-      expect(testAge6.lifeLength-testAge6.age).toEqual(55)
+      testAge6.lifeLength=90
+      expect(testAge6.yearsLeft()).toEqual(55)
+      
     })
   })
 
