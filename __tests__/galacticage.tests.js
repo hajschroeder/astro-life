@@ -41,18 +41,28 @@ describe('Galactic', () => {
     })
 
     test('should determine lifespan from lifestyle information', () =>{
-    let testAgeHM = new Galactic(40, "Healthy Male");
-    let testAgeMS = new Galactic(40, "Male Smoker");
-    let testAgeHF = new Galactic(40, "Healthy Female");
-    let testAgeFS = new Galactic(40, "Female Smoker");
-    testAgeHM.lifeExpectancy()
-    testAgeMS.lifeExpectancy()
-    testAgeHF.lifeExpectancy()
-    testAgeFS.lifeExpectancy()
-    expect(testAgeHM.lifeLength).toEqual(85)
-    expect(testAgeMS.lifeLength).toEqual(75)
-    expect(testAgeHF.lifeLength).toEqual(90)
-    expect(testAgeFS.lifeLength).toEqual(82)
+      let testAgeHM = new Galactic(40, "Healthy Male");
+      let testAgeMS = new Galactic(40, "Male Smoker");
+      let testAgeHF = new Galactic(40, "Healthy Female");
+      let testAgeFS = new Galactic(40, "Female Smoker");
+      testAgeHM.lifeExpectancy()
+      testAgeMS.lifeExpectancy()
+      testAgeHF.lifeExpectancy()
+      testAgeFS.lifeExpectancy()
+      expect(testAgeHM.lifeLength).toEqual(85)
+      expect(testAgeMS.lifeLength).toEqual(75)
+      expect(testAgeHF.lifeLength).toEqual(90)
+      expect(testAgeFS.lifeLength).toEqual(82)
+    })
   })
-})
+
+  describe ('Galactic#yearsLeft', () =>{
+
+    test('should subtract age from life expectancy', () =>{
+      let testAge6 = new Galactic(35, "Healthy Female");
+      testAge6.yearsLeft();
+      expect(testAge6.lifeLength-testAge6.age).toEqual(55)
+    })
+  })
+
 })
