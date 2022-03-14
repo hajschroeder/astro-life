@@ -13,6 +13,7 @@ export default class Galactic{
     this.mars = 1.88;
     this.jupiter = 11.86;
 
+
     const earthYears = this.earth*this.age;
     const mercYears = this.mercury*this.age;
     const venusYears = this.venus*this.age;
@@ -29,7 +30,6 @@ export default class Galactic{
     this.smokerMale = "Male Smoker";
     this.healthyFemale = "Healthy Female";
     this.smokerFemale = "Female Smoker";
-
     if (this.lifestyle === this.healthyMale){
       this.lifeLength = 85;
     } else if(this.lifestyle === this.smokerMale){
@@ -41,10 +41,10 @@ export default class Galactic{
     }
   }
 
-  
+  yearsLeft() {
+    let remainingYears = (this.lifeLength - this.age);
+    return remainingYears;
+  }
+
 }
-
-
-
-
 
