@@ -79,6 +79,18 @@ describe('Galactic', () => {
 
     })
   })
-})
 
+  describe ('earthData', () =>{
+    test('should gather data from previous functions', () =>{
+      let testAgeEarth = new Galactic(60, "Male Smoker")
+      testAgeEarth.lifeLength=75
+      testAgeEarth.earthData();
+      expect(testAgeEarth.age).toEqual(60);
+      expect(testAgeEarth.lifeStyle).toEqual("Male Smoker")
+      expect(testAgeEarth.remainingYears).toEqual(15);
+
+    })
+  })
+
+})
 
