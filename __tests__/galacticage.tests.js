@@ -60,11 +60,8 @@ describe('Galactic', () => {
 
     test('should subtract age from life expectancy', () =>{
       let testAge6 = new Galactic(35, "Healthy Female");
-      let testAge6point2 = new Galactic(100, "Healthy Female")
       testAge6.lifeLength=90
       expect(testAge6.yearsLeft()).toEqual(55)
-      expect(testAge6point2.yearsLeft()).toEqual("Ah, The Gods have blessed you with strength and vitality")
-      
     })
 
   
@@ -94,6 +91,8 @@ describe('Galactic', () => {
       expect(testAgePlanet.age).toEqual(60);
       expect(testAgePlanet.lifestyle).toEqual("Male Smoker")
       expect(testAgePlanet.remainingYears).toEqual(15);
+      expect(testAgePlanet.longLife()).toEqual("I've got my eye on you");
+      
 
     })
 
