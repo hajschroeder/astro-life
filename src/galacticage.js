@@ -3,6 +3,7 @@ export default class Galactic{
   constructor(age, lifestyle){
     this.age = age;
     this.lifestyle = lifestyle;
+    this.lifeLength = 0;
   }
   
   planetYears() {
@@ -43,6 +44,7 @@ export default class Galactic{
 
   yearsLeft() {
     this.remainingYears = (this.lifeLength - this.age);
+    (this.remainingYears>0);
     return this.remainingYears;
   }
 
@@ -55,41 +57,77 @@ export default class Galactic{
   
   }
   
-  earthData() {
+  planetData() {
+    let dataArray = [];
     const earth = {
       age: this.age,
       lifestyle: this.lifestyle,
       lifeExpect: this.lifeLength,
       earthYearsLeft: this.yearsLeft(),
       earthYearsOver: this.longLife()
-    }
+    };
+    
+    const mercury = {
+      age: this.planetYears()[1],
+      lifestyle: this.lifestyle,
+      lifeExpect: this.lifeLength*this.mercury,
+      mercuryYearsLeft: this.yearsLeft()*this.mercury,
+      mercuryYearsOver: this.longLife()*this.mercury
+    };
+
+    const venus = {
+      age: this.planetYears()[2],
+      lifestyle: this.lifestyle,
+      lifeExpect: this.lifeLength*this.venus,
+      venusYearsLeft: this.yearsLeft()*this.venus,
+      venusYearsOver: this.longLife()*this.venus
+    };
+    
+    const mars = {
+      age: this.planetYears()[3],
+      lifestyle: this.lifestyle,
+      lifeExpect: this.lifeLength*this.mars,
+      marsYearsLeft: this.yearsLeft()*this.mars,
+      marsYearsOver: this.longLife()*this.mars
+    };
+
+    const jupiter = {
+      age: this.planetYears()[4],
+      lifestyle: this.lifestyle,
+      lifeExpect: this.lifeLength*this.jupiter,
+      jupiterYearsLeft: this.yearsLeft()*this.jupiter,
+      jupiterYearsOver: this.longLife()*this.jupiter
+    };
+    dataArray.push(earth, mercury, venus, mars, jupiter);
+
+    return dataArray;
   }
 
   
   
 }
 
-let myAge = new Galactic(35, "Healthy Female");
+let myAge = new Galactic(35, "Healthy Male");
 console.log(myAge);
-console.log('break');
+console.log('lifeExpectancy');
 console.log(myAge.lifeExpectancy());
-console.log('break');
+console.log('planet years');
 console.log(myAge.planetYears());
-console.log('break');
+console.log('my age dot lifestyle');
 console.log(myAge.lifestyle);
-console.log('break');
+console.log('my age dot age');
 console.log(myAge.age);
-console.log('break');
+console.log('my age dot life length');
 console.log(myAge.lifeLength);
-console.log('break');
+console.log('life length minus age');
 console.log((myAge.lifeLength)-(myAge.age));
-console.log('break');
+console.log('years left');
 console.log(myAge.yearsLeft());
-console.log('break');
+console.log('age on a diff planet');
 console.log(myAge.planetYears()[3]);
-console.log('break');
+console.log('years left on mercury');
 console.log(myAge.yearsLeft()*(myAge.mercury));
-console.log('break');
+console.log('straight numbers');
 console.log(55*0.24);
 console.log(`why is this not working ${myAge.planetYears()[1]}`); 
-
+console.log(myAge.planetData());

@@ -6,3 +6,4 @@ import Galactic from './galacticage.js';
 
 let testAge= new Galactic(100, "Healthy Male");
 console.log(testAge);
+
