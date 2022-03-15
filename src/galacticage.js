@@ -42,8 +42,8 @@ export default class Galactic{
   }
 
   yearsLeft() {
-    let remainingYears = (this.lifeLength - this.age);
-    return remainingYears;
+    this.remainingYears = (this.lifeLength - this.age);
+    return this.remainingYears;
   }
 
   longLife() {
@@ -54,8 +54,42 @@ export default class Galactic{
     } else return myEye;
   
   }
+  
+  earthData() {
+    const earth = {
+      age: this.age,
+      lifestyle: this.lifestyle,
+      lifeExpect: this.lifeLength,
+      earthYearsLeft: this.yearsLeft(),
+      earthYearsOver: this.longLife()
+    }
+  }
 
   
   
 }
+
+let myAge = new Galactic(35, "Healthy Female");
+console.log(myAge);
+console.log('break');
+console.log(myAge.lifeExpectancy());
+console.log('break');
+console.log(myAge.planetYears());
+console.log('break');
+console.log(myAge.lifestyle);
+console.log('break');
+console.log(myAge.age);
+console.log('break');
+console.log(myAge.lifeLength);
+console.log('break');
+console.log((myAge.lifeLength)-(myAge.age));
+console.log('break');
+console.log(myAge.yearsLeft());
+console.log('break');
+console.log(myAge.planetYears()[3]);
+console.log('break');
+console.log(myAge.yearsLeft()*(myAge.mercury));
+console.log('break');
+console.log(55*0.24);
+console.log(`why is this not working ${myAge.planetYears()[1]}`); 
 
