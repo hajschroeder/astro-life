@@ -80,17 +80,26 @@ describe('Galactic', () => {
     })
   })
 
-  describe ('earthData', () =>{
+  describe ('Galactic#planetData', () =>{
     test('should gather data from previous functions', () =>{
       let testAgeEarth = new Galactic(60, "Male Smoker")
       testAgeEarth.lifeLength=75
-      testAgeEarth.earthData();
+      testAgeEarth.planetData();
       expect(testAgeEarth.age).toEqual(60);
-      expect(testAgeEarth.lifeStyle).toEqual("Male Smoker")
+      expect(testAgeEarth.lifestyle).toEqual("Male Smoker")
       expect(testAgeEarth.remainingYears).toEqual(15);
 
     })
+
+    test('should make an array of all data sets', () =>{
+    let dataArrayTest = []
+    const test1 = "test1"
+    const test2 = "test2"
+    expect(dataArrayTest.push(test1, test2)).toEqual(2)
   })
 
+  })
+
+  
 })
 
