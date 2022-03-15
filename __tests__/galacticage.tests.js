@@ -71,8 +71,12 @@ describe('Galactic', () => {
   describe ('Galactic#longLife', () =>{
     test('should turn years of outlived expectancy into a positive integer', () =>{
       let testAge7= new Galactic(120, "Healthy Male");
+      let testAge8 = new Galactic(12, "Healthy Male");
       testAge7.lifeLength = 85
+      testAge8.lifeLength = 85
       expect(testAge7.longLife()).toEqual(35)
+      expect(testAge8.longLife()).toEqual("I've got my eye on you")
+
     })
   })
 })
