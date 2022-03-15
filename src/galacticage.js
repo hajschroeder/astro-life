@@ -106,28 +106,3 @@ export default class Galactic{
   
   
 }
-
-let myAge = new Galactic(35, "Healthy Male");
-console.log(myAge);
-console.log('lifeExpectancy');
-console.log(myAge.lifeExpectancy());
-console.log('planet years');
-console.log(myAge.planetYears());
-console.log('my age dot lifestyle');
-console.log(myAge.lifestyle);
-console.log('my age dot age');
-console.log(myAge.age);
-console.log('my age dot life length');
-console.log(myAge.lifeLength);
-console.log('life length minus age');
-console.log((myAge.lifeLength)-(myAge.age));
-console.log('years left');
-console.log(myAge.yearsLeft());
-console.log('age on a diff planet');
-console.log(myAge.planetYears()[3]);
-console.log('years left on mercury');
-console.log(myAge.yearsLeft()*(myAge.mercury));
-console.log('straight numbers');
-console.log(55*0.24);
-console.log(`why is this not working ${myAge.planetYears()[1]}`); 
-console.log(myAge.planetData());
