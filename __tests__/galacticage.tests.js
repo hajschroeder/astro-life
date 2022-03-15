@@ -64,6 +64,17 @@ describe('Galactic', () => {
       expect(testAge6.yearsLeft()).toEqual(55)
       
     })
+
+  
   })
 
+  describe ('Galactic#longLife', () =>{
+    test('should turn years of outlived expectancy into a positive integer', () =>{
+      let testAge7= new Galactic(120, "Healthy Male");
+      testAge7.lifeLength = 85
+      expect(testAge7.longLife()).toEqual(35)
+    })
+  })
 })
+
+
