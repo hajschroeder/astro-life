@@ -60,8 +60,10 @@ describe('Galactic', () => {
 
     test('should subtract age from life expectancy', () =>{
       let testAge6 = new Galactic(35, "Healthy Female");
+      let testAge6point2 = new Galactic(100, "Healthy Female")
       testAge6.lifeLength=90
       expect(testAge6.yearsLeft()).toEqual(55)
+      expect(testAge6point2.yearsLeft()).toEqual("Ah, The Gods have blessed you with strength and vitality")
       
     })
 
@@ -82,12 +84,16 @@ describe('Galactic', () => {
 
   describe ('Galactic#planetData', () =>{
     test('should gather data from previous functions', () =>{
-      let testAgeEarth = new Galactic(60, "Male Smoker")
-      testAgeEarth.lifeLength=75
-      testAgeEarth.planetData();
-      expect(testAgeEarth.age).toEqual(60);
-      expect(testAgeEarth.lifestyle).toEqual("Male Smoker")
-      expect(testAgeEarth.remainingYears).toEqual(15);
+      let testAgePlanet = new Galactic(60, "Male Smoker")
+      testAgePlanet.lifeLength=75
+      testAgePlanet.planetData();
+      expect(testAgePlanet.planetYears()[1]).toEqual(14.399999999999999)
+      expect(testAgePlanet.planetYears()[2]).toEqual(37.2)
+      expect(testAgePlanet.planetYears()[3]).toEqual(112.8)
+      expect(testAgePlanet.planetYears()[4]).toEqual(711.5999999999999)
+      expect(testAgePlanet.age).toEqual(60);
+      expect(testAgePlanet.lifestyle).toEqual("Male Smoker")
+      expect(testAgePlanet.remainingYears).toEqual(15);
 
     })
 
@@ -100,6 +106,6 @@ describe('Galactic', () => {
 
   })
 
-  
+
 })
 
