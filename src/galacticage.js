@@ -46,5 +46,16 @@ export default class Galactic{
     return remainingYears;
   }
 
+  longLife() {
+    let livedLong = this.yearsLeft();
+    const myEye = "I've got my eye on you";
+    if (livedLong<0){
+      return livedLong*(-1);
+    } else return myEye;
+  
+  }
+
+  
+  
 }
 
