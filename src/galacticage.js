@@ -31,9 +31,9 @@ export default class Galactic{
       this.lifeLength = 85;
     } else if(this.lifestyle === "Male Smoker"){
       this.lifeLength = 75;
-    } else if (this.lifestyle === "Healthy Female"){
+    } else if(this.lifestyle === "Healthy Female"){
       this.lifeLength = 90;
-    } else if (this.lifestyle === "Female Smoker"){
+    } else if(this.lifestyle === "Female Smoker"){
       this.lifeLength = 82;
     }
     return this.lifeLength;
@@ -67,7 +67,7 @@ export default class Galactic{
     const mercury = {
       age: this.planetYears()[1],
       lifestyle: this.lifestyle,
-      lifeExpect: this.lifeLength*this.mercury,
+      lifeExpect: this.lifeExpectancy()*this.mercury,
       mercuryYearsLeft: this.yearsLeft()*this.mercury,
       mercuryYearsOver: this.longLife()*this.mercury
     };
@@ -108,3 +108,5 @@ console.log(myAge.lifeLength);
 console.log(myAge.lifeExpectancy());
 console.log(lomAge.lifeExpectancy());
 console.log(lomAge.planetData());
+let soAndSoAge = new Galactic(40, "Female Smoker");
+console.log(soAndSoAge.planetData());

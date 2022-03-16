@@ -31,14 +31,6 @@ describe('Galactic', () => {
   })
 
   describe ('Galactic#lifeExpectancy()', () =>{
-    test('should gather lifestyle information', () =>{
-      let testAge3 = new Galactic()
-      testAge3.lifeExpectancy();
-      expect(testAge3.healthyMale).toEqual("Healthy Male");
-      expect(testAge3.smokerMale).toEqual("Male Smoker");
-      expect(testAge3.healthyFemale).toEqual("Healthy Female");
-      expect(testAge3.smokerFemale).toEqual("Female Smoker");
-    })
 
     test('should determine lifespan from lifestyle information', () =>{
       let testAgeHM = new Galactic(40, "Healthy Male");
