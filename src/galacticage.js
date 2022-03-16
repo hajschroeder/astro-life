@@ -3,7 +3,6 @@ export default class Galactic{
   constructor(age, lifestyle){
     this.age = age;
     this.lifestyle = lifestyle;
-    this.lifeLength = 0;
   }
   
   planetYears() {
@@ -27,19 +26,17 @@ export default class Galactic{
   
   
   lifeExpectancy() {
-    this.healthyMale = "Healthy Male";
-    this.smokerMale = "Male Smoker";
-    this.healthyFemale = "Healthy Female";
-    this.smokerFemale = "Female Smoker";
-    if (this.lifestyle === this.healthyMale){
+
+    if (this.lifestyle === "Healthy Male"){
       this.lifeLength = 85;
-    } else if(this.lifestyle === this.smokerMale){
+    } else if(this.lifestyle === "Male Smoker"){
       this.lifeLength = 75;
-    } else if (this.lifestyle === this.healthyFemale){
+    } else if (this.lifestyle === "Healthy Female"){
       this.lifeLength = 90;
-    } else if (this.lifestyle === this.smokerFemale){
+    } else if (this.lifestyle === "Female Smoker"){
       this.lifeLength = 82;
     }
+    return this.lifeLength;
   }
 
   yearsLeft() {
@@ -62,7 +59,7 @@ export default class Galactic{
     const earth = {
       age: this.age,
       lifestyle: this.lifestyle,
-      lifeExpect: this.lifeLength,
+      lifeExpect: this.lifeExpectancy(),
       earthYearsLeft: this.yearsLeft(),
       earthYearsOver: this.longLife()
     };
@@ -78,7 +75,7 @@ export default class Galactic{
     const venus = {
       age: this.planetYears()[2],
       lifestyle: this.lifestyle,
-      lifeExpect: this.lifeLength*this.venus,
+      lifeExpect: this.lifeExpectancy()*this.venus,
       venusYearsLeft: this.yearsLeft()*this.venus,
       venusYearsOver: this.longLife()*this.venus
     };
@@ -86,7 +83,7 @@ export default class Galactic{
     const mars = {
       age: this.planetYears()[3],
       lifestyle: this.lifestyle,
-      lifeExpect: this.lifeLength*this.mars,
+      lifeExpect: this.lifeExpectancy()*this.mars,
       marsYearsLeft: this.yearsLeft()*this.mars,
       marsYearsOver: this.longLife()*this.mars
     };
@@ -94,7 +91,7 @@ export default class Galactic{
     const jupiter = {
       age: this.planetYears()[4],
       lifestyle: this.lifestyle,
-      lifeExpect: this.lifeLength*this.jupiter,
+      lifeExpect: this.lifeExpectancy()*this.jupiter,
       jupiterYearsLeft: this.yearsLeft()*this.jupiter,
       jupiterYearsOver: this.longLife()*this.jupiter
     };
@@ -102,7 +99,12 @@ export default class Galactic{
 
     return dataArray;
   }
-
-  
-  
 }
+let myAge = new Galactic(35, "Male Smoker");
+let lomAge = new Galactic(35, "Healthy Female");
+console.log(lomAge.lifeLength);
+console.log(myAge.planetData());
+console.log(myAge.lifeLength);
+console.log(myAge.lifeExpectancy());
+console.log(lomAge.lifeExpectancy());
+console.log(lomAge.planetData());
