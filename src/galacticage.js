@@ -100,13 +100,3 @@ export default class Galactic{
     return dataArray;
   }
 }
-let myAge = new Galactic(35, "Male Smoker");
-let lomAge = new Galactic(35, "Healthy Female");
-console.log(lomAge.lifeLength);
-console.log(myAge.planetData());
-console.log(myAge.lifeLength);
-console.log(myAge.lifeExpectancy());
-console.log(lomAge.lifeExpectancy());
-console.log(lomAge.planetData());
-let soAndSoAge = new Galactic(40, "Female Smoker");
-console.log(soAndSoAge.planetData());
