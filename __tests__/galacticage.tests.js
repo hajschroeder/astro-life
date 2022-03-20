@@ -37,15 +37,18 @@ describe('Galactic', () => {
       let testAgeMS = new Galactic(40, "Male Smoker");
       let testAgeHF = new Galactic(40, "Healthy Female");
       let testAgeFS = new Galactic(40, "Female Smoker");
+      let testAgeEmpty = new Galactic(40, "");
       testAgeHM.lifeExpectancy()
       testAgeMS.lifeExpectancy()
       testAgeHF.lifeExpectancy()
       testAgeFS.lifeExpectancy()
+      testAgeEmpty.lifeExpectancy()
       expect(testAgeHM.lifeLength).toEqual(85)
       expect(testAgeMS.lifeLength).toEqual(75)
       expect(testAgeHF.lifeLength).toEqual(90)
       expect(testAgeFS.lifeLength).toEqual(82)
-    })
+      expect(testAgeEmpty.lifeLength).toEqual("empty field")
+        })
   })
 
   describe ('Galactic#yearsLeft', () =>{
@@ -66,7 +69,7 @@ describe('Galactic', () => {
       testAge7.lifeLength = 85
       testAge8.lifeLength = 85
       expect(testAge7.longLife()).toEqual(35)
-      expect(testAge8.longLife()).toEqual("I've got my eye on you")
+      expect(testAge8.longLife()).toEqual(0)
 
     })
   })
@@ -83,7 +86,7 @@ describe('Galactic', () => {
       expect(testAgePlanet.age).toEqual(60);
       expect(testAgePlanet.lifestyle).toEqual("Male Smoker")
       expect(testAgePlanet.remainingYears).toEqual(15);
-      expect(testAgePlanet.longLife()).toEqual("I've got my eye on you");
+      expect(testAgePlanet.longLife()).toEqual(0);
       
 
     })

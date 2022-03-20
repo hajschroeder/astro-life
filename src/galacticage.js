@@ -35,6 +35,8 @@ export default class Galactic{
       this.lifeLength = 90;
     } else if(this.lifestyle === "Female Smoker"){
       this.lifeLength = 82;
+    } else {
+      this.lifeLength = "empty field"
     }
     return this.lifeLength;
   }
@@ -47,7 +49,7 @@ export default class Galactic{
 
   longLife() {
     let livedLong = this.yearsLeft();
-    const myEye = "I've got my eye on you";
+    const myEye = 0;
     if (livedLong<0){
       return livedLong*(-1);
     } else return myEye;
